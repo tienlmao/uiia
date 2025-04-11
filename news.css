@@ -1,0 +1,148 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: rgb(4, 175, 255);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background-color: #0307d6;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.marquee p {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    animation: marqueeScroll 15s linear infinite;
+}
+
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.news-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.news-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.news-item:hover {
+    transform: scale(1.02);
+}
+
+.news-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-item h3 {
+    margin: 10px;
+}
+
+.news-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+.news-item p {
+    margin: 0 10px 10px;
+}
+
+footer {
+    text-align: center;
+    background: rgb(3, 196, 255);
+    color: white;
+    padding: 10px 0;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

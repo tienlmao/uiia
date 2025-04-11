@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trường THPT Lương Tài</title>
+    <link rel="stylesheet" href="introduce.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" style="color: white; text-decoration: none;" >Trường THPT Lương Tài</a>
+    </header>
+    <div class="container">
+        <h2>Giới thiệu về trường</h2>
+        <p>Trường THPT Lương Tài là một trong những ngôi trường có bề dày lịch sử và thành tích xuất sắc trong giáo dục tại địa phương. Với đội ngũ giáo viên tận tâm và cơ sở vật chất hiện đại, trường luôn hướng đến mục tiêu đào tạo thế hệ trẻ có kiến thức, đạo đức và kỹ năng cần thiết để thành công trong tương lai.</p>
+        
+        <div class="image-section">
+            <img src="hdsp.jpg" alt="Hình ảnh trường THPT Lương Tài" class="zoomable" onclick="openZoom(this)">
+            <p>Hội đồng sư phạm trường THPT Lương Tài</p>
+        </div>
+        <h2>Ban giám hiệu nhà trường</h2>
+        <div class="image-section">
+            <img src="anh7.jpg" alt="Học sinh tham gia hoạt động" class="zoomable" onclick="openZoom(this)">
+            <img src="anh8.jpg" alt="Học sinh tham gia hoạt động" class="zoomable" onclick="openZoom(this)">
+            <p>Hình ảnh các thầy cô trong Ban giám hiệu nhà trường</p>
+        </div>    
+
+        <div class="content" >
+             <h2>Các hoạt động nổi bật</h2>
+        </div>
+            <div class="image-section">
+              <img src="anh4.jpg" alt="Học sinh tham gia hoạt động" class="zoomable" onclick="openZoom(this)">
+              <p>Học sinh nhà trường trong ngày khai giảng năm học mới</p>
+              <img src="anh3.jpg" alt="Học sinh tham gia hoạt động" class="zoomable" onclick="openZoom(this)">
+                <p>Học sinh tham gia các hoạt động ngoại khóa</p>
+                <img src="anh5.jpg" alt="Học sinh tham gia hoạt động" class="zoomable" onclick="openZoom(this)">
+                <p> Tham gia các cuộc thi văn hóa, văn nghệ</p>
+                <img src="anh6.jpg" alt="Học sinh tham gia hoạt động" class="zoomable" onclick="openZoom(this)">
+                <p>Học sinh tích cực tham gia các hoạt động thể dục thể thao</p>
+            </div>
+  
+    </div>
+    
+    <button onclick="scrollToTop()" id="scrollToTopBtn">⬆️ Lên đầu</button>
+    <footer>
+        &copy; 2025 Trường THPT Lương Tài - Mọi quyền được bảo lưu
+        <p>Ấn vào tên trường ở đầu trang để quay lại trang chủ</p>
+    </footer>
+    <div id="zoom-overlay" onclick="closeZoom()">
+        <img id="zoom-img" src="" alt="Zoomed Image">
+      </div>
+      <script>
+    function openZoom(imgElement) {
+        const zoomOverlay = document.getElementById('zoom-overlay');
+        const zoomImg = document.getElementById('zoom-img');
+        zoomImg.src = imgElement.src;
+        zoomOverlay.style.display = 'flex';
+      }
+      
+      function closeZoom() {
+        const zoomOverlay = document.getElementById('zoom-overlay');
+        zoomOverlay.style.display = 'none';
+      }
+    
+        window.onscroll = function() {
+            const btn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+              btn.style.display = "block";
+            } else {
+              btn.style.display = "none";
+            }
+          };
+        
+          function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+      
+    </script>
+
+    
+</body>
+</html>

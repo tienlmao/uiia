@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trường THPT Lương Tài</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  
+  <header>
+    <div>
+        <div class="welcome-bar">
+  <p>🎉 Chào mừng đến với website trường THPT Lương Tài!</p>
+</div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="introduce.html">Giới thiệu</a></li>
+            <li><a href="news.html">Tin tức</a></li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="banner">
+  <img src="https://thptluongtai.bacninh.edu.vn/upload/63117/20190331/bgbanner_moi1.png" alt="Biển hiệu">
+</section>
+
+<div class="main-layout">
+  <div class="left-column">
+    <div class="card">
+      <h2>Giới thiệu</h2>
+      <ul>
+        <li>Đoàn Thanh niên CS Hồ Chí Minh</li>
+        <li>Tổ chuyên môn</li>
+        <li>Tổ Văn phòng</li>
+        <li>PHHS</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Danh sách liên kết</h2>
+      <ul>
+        <li>Tra cứu điểm thi</li>
+        <li>Hỏi đáp</li>
+        <li>Bài giảng điện tử</li>
+        <li>Cơ cấu tổ chức</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="center-column">
+    <div class="card">
+      <a href="news.html" style="color: black"><h2>Tin mới nhất</h2></a>
+      <img src="https://i1-vnexpress.vnecdn.net/2025/04/07/z5190765945549-9f8a36539dbd76f-3959-3892-1744015762.jpg?w=680&h=0&q=100&dpr=1&fit=crop&s=jb6ZoM52M3nOC7ilPoE4ug" alt="Tin mới" style="width: 100%; border-radius: 10px;">
+      <p>Nam sinh giành cú đúp huy chương vàng Olympic Toán toàn quốc</p>
+    </div>
+    <div class="card">
+      <h2>Hoạt động của nhà trường</h2>
+      <ul>
+        <li>Kế hoạch khảo sát và xếp lớp</li>
+        <li>Những hình ảnh ấn tượng tại lễ tổng kết</li>
+        <li>Hướng dẫn hoạt động tư vấn tâm lý</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="right-column">
+    <div class="card">
+      <h2>Chính phủ điện tử</h2>
+      <div class="gov-links">
+          <a href="https://moet.gov.vn/Pages/home.aspx">Cổng thông tin Bộ GD&ĐT</a>
+          <a href="https://dichvucong.gov.vn/p/home/dvc-trang-chu.html">Cổng dịch vụ công Quốc gia</a>
+          <a href="https://bacninh.gov.vn/  ">Cổng thông tin Bắc Ninh</a>
+          <a href="http://truong.bacninh.edu.vn/Login.aspx?returnUrl=~/default.aspx">Hệ thống quản lý giáo dục Bắc Ninh</a>
+        </div>
+    </div>
+    <div class="card">
+      <h2>Video Clip</h2>
+      <iframe width="100%" height="315" 
+         src="https://www.youtube.com/embed/T91eUINuo0o" 
+         title="YouTube video player" 
+         frameborder="0" 
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+         allowfullscreen>
+      </iframe>
+
+    </div>
+  </div>
+</div>
+  
+  <button onclick="scrollToTop()" id="scrollToTopBtn">⬆️ Lên đầu</button>
+  <footer>
+      <p>&copy; 2025 Trường THPT Lương Tài. All rights reserved.</p>
+      <h3> Địa chỉ: Thị trấn Thứa, Huyện Lương Tài, tỉnh Bắc Ninh </h3>
+      <h3> Điện thoại: (0222) 3867 255</h3>         
+      <h3> Email: c3luongtai@bacninh.edu.vn</h3>
+      <h4>Mọi thắc mắc và liên hệ hãy ấn vào nút bên dưới.</h4>
+      <a href="contactusd.html"> <button class="button-rgb">Bấm vào đây</button>
+      </a>
+  </footer>
+</body>
+<script>
+window.onscroll = function() {
+  const btn = document.getElementById("scrollToTopBtn");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

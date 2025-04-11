@@ -1,0 +1,132 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: rgb(4, 185, 218);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .link {
+            text-decoration: none;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .image-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-section img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .image-section p {
+            font-style: italic;
+            color: #555;
+        }
+        footer {
+            background-color: rgb(4, 185, 218);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+   
+        }
+        .zoomable {
+            width: 200px;
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+          }
+          
+          #zoom-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+          }
+          
+          #zoom-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+          }
+          @keyframes scrollNews {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+            }
+            #scrollToTopBtn {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            #scrollToTopBtn:hover {
+            background-color: #45a049;
+            }
+
+/* Responsive ảnh */
+@media screen and (max-width: 768px) {
+    .zoomable {
+        width: 100% !important;
+    }
+}
+
+/* Căn giữa và cách ảnh đẹp hơn */
+.image-section {
+    text-align: center;
+    margin-top: 30px;
+}
+.image-section img {
+    margin: 10px;
+}
+
+/* Hiệu ứng mượt cho zoom overlay */
+#zoom-overlay {
+    transition: all 0.3s ease-in-out;
+}
+#zoom-overlay img {
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

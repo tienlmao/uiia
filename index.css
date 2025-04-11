@@ -1,0 +1,287 @@
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgb(23, 151, 255);
+color: white;
+padding: 10px 20px;
+}
+
+header .logo img {
+height: 50px;
+}
+
+nav ul {
+display: flex;
+list-style: none;
+}
+
+nav ul li {
+margin: 0 15px;
+}
+
+nav ul li a {
+color: rgb(255, 255, 255);
+text-decoration: none;
+}
+
+nav ul li a:hover {
+text-decoration: underline;
+}
+
+.banner img {
+width: 100%;
+height: auto;
+}
+
+main {
+padding: 20px;
+}
+
+.introduction {
+display: flex;
+flex-direction: column;
+justify-content: center; 
+align-items: center;
+text-align: center;
+}
+
+.news {
+background-color: #f4f4f4;
+padding: 20px;
+}
+
+.news-item {
+margin-bottom: 15px;
+}
+
+.news-item h3 {
+margin-bottom: 10px;
+}
+
+footer {
+background-color: rgb(4, 185, 218);
+color: white;
+text-align: center;
+padding: 10px 0;
+margin-top: 20px;
+}
+
+a {
+text-decoration: none;
+color: #fffbfb;
+font-weight: bold;
+}
+
+/*cần nhìn lại chỗ này*/
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+/*đến đây là dừng*/
+.news-container {
+width: 100%;
+overflow: hidden;
+background: white;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+white-space: nowrap;
+position: relative;
+display: flex;
+justify-content: center;
+}
+
+.news-content {
+display: inline-block;
+padding-left: 100%;
+animation: scrollNews 40s linear infinite;
+}
+
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .center-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    word-wrap: break-word;
+  }
+  .card h2 {
+    margin-top: 0;
+  }
+  .card ul li {
+    word-break: break-word;
+    white-space: normal;
+  }
+  .card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+@keyframes rgbGlow {
+0% { box-shadow: 0 0 10px red; background-color: red; }
+25% { box-shadow: 0 0 10px blue; background-color: blue; }
+50% { box-shadow: 0 0 10px green; background-color: green; }
+75% { box-shadow: 0 0 10px yellow; background-color: yellow; }
+100% { box-shadow: 0 0 10px red; background-color: red; }
+}
+
+.button-rgb {
+color: rgb(255, 252, 252);
+padding: 12px 24px;
+font-size: 16px;
+font-weight: bold;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+animation: rgbGlow 2s infinite alternate; 
+transition: transform 0.5s ease;
+}
+
+.button-rgb:hover {
+transform: scale(1.1); 
+}
+
+keyframes scrollNews {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  #scrollToTopBtn:hover {
+    background-color: #45a049;
+  }
+
+  .gov-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .gov-links a {
+    background-color: #e8f0fe;
+    color: #02457a;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  .gov-links a:hover {
+    background-color: #c2dbff;
+  }
+
+/* Welcome Bar */
+.welcome-bar {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 2px solid #ffeeba;
+}
+
+/* Mobile-friendly layout */
+@media screen and (max-width: 768px) {
+  .main-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-column, .center-column, .right-column {
+    width: 100%;
+  }
+}
+
+/* Footer cải tiến */
+footer h3, footer h4 {
+  margin: 5px 0;
+  font-weight: normal;
+  color: #f1f1f1;
+}
+
+/* Tăng độ nổi bật của nút liên hệ */
+.button-rgb {
+  margin-top: 10px;
+  width: 200px;
+}
